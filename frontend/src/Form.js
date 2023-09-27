@@ -12,7 +12,10 @@ function Form() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = axios.post('http://172.19.0.4:5000/api/save-data', formData)
+            
+
+            const response = axios.post('http://localhost:5000/api/save-data', formData)
+            //const response = axios.post('http://172.19.0.4:5000/api/save-data', formData)
             console.log(response.data.message);
         } catch (error) {
             console.error(error);

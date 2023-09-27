@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)  # Replace with your React app's URL
 
 # Replace the connection string with your MongoDB configuration
-client = MongoClient('mongodb://admin:admin@172.19.0.5:27017/?authSource=admin')
+client = MongoClient('mongodb://USERNAME:PASSWORD@localhost:27107/?authSource=admin')
 
 @app.route('/api/save-data', methods=['POST'])
 def save_data():
@@ -22,3 +22,4 @@ def save_data():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
+    
